@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Mission to Mars Data Scraping</title>
+</head>
+
+<body style="background:white;">
+    <div class="container" style="background:white;">
+        <div class="jumbotron text-center" style="background-image: url(https://github.com/tdimare/webscraping/blob/master/3225a.jpg?raw=true); height: 400px; background-position: center; background-size: cover;">
+            <h1 style="color:white">
+              Mission to Mars Data Scraping</h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+        </div>
+        <h1 style="color:black; text-align:center; margin-bottom:30px; border-bottom:1px solid white; padding-bottom:10px;">
+            Mars Information
+        </h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><center>Mars News</center></h3>
+                    </div>
+                    <div class="panel-body">
+                        <h4><center>{{ mars.news_title }}</center></h4>
+                        <p><center>{{ mars.news_paragraph }}</center></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><center>Mars Weather</center></h3>
+                    </div>
+                    <div class="panel-body">
+                        <p><center>{{ mars.weather_tweets }}</center></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><center>Cool Mars Facts</center></h3>
+                    </div>
+                    <div class="panel-body">
+                        <table><center>{{ mars.mars_facts|safe }}</center></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 style="color:white; text-align:center; margin-bottom:30px; border-bottom:1px solid white; padding-bottom:10px;">
+            USGS Mars Images
+        </h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Featured Mars Image</h3>
+                      </div>
+                      <div class="panel-body">
+                          <img id="bio-image" src= "https://github.com/tdimare/webscraping/blob/master/mars_featured_image.jpg?raw=true" alt="Featured Image" class="img-responsive" style="width:50%">
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="panel panel-default">
+                      <div class="panel-heading">
+                          <h3 class="panel-title">Martian Hemispheres</h3>
+                      </div>
+                      <div class="panel-body">
+                        <div class="col-md-8">
+                              <img id="bio-image" src= "https://github.com/tdimare/webscraping/blob/master/Mars_Cerberus_enhanced.jpg?raw=true" alt="Hemisphere1" style="width:50%">
+                              <div class="caption">
+                                  <h4>Cerberus</h4>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel-body">
+                          <div class="col-md-8">
+                              <img id="bio-image" src= "https://github.com/tdimare/webscraping/blob/master/Mars_Syrtis_major_Enhanced.jpg?raw=true" alt="Hemisphere2" style="width:50%">
+                              <div class="caption">
+                                  <h4>Syrtis Major</h4>
+                              </div>
+                          </div>
+                          <div class="panel-body">
+                          <div class="col-md-8">
+                              <img id="bio-image" src= "https://github.com/tdimare/webscraping/blob/master/Mars_Valles_marineris_enhanced.jpg?raw=true" alt="Hemisphere3" style="width:50%">
+                              <div class="caption">
+                                  <h4>Valles Marineris</h4>
+                              </div>
+                          </div>
+                          <div class="panel-body">
+                          <div class="col-md-8">
+                              <img id="bio-image" src= "https://github.com/tdimare/webscraping/blob/master/Mars_schiaparelli_enhanced.jpg?raw=true" alt="Hemisphere4" style="width:50%">
+                              <div class="caption">
+                                  <h4>Schiaparelli</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
